@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background-color: #f4f4f9; 
+        } 
+
+        form { 
+            display: grid; 
+            grid-template-columns: 1fr 2fr; 
+            gap: 10px; 
+            max-width: 400px; 
+            background: #ffffff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        } 
+
+        h1 { 
+            grid-column: span 2;
+            text-align: center; 
+            margin: 0; 
+            font-size: 24px; 
+            color: #4a4a4a; 
+        } 
+
+        label { 
+            font-weight: bold; 
+            color: #555; 
+        } 
+
+        input[type="text"], 
+        input[type="number"], 
+        input[type="email"], 
+        input[type="password"] { 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            padding: 8px; 
+            font-size: 14px; 
+            outline: none; 
+        } 
+
+        input:focus { 
+            border-color: #9fd6fc; 
+            box-shadow: 0 0 5px rgba(159, 214, 252, 0.5); 
+        } 
+
+        .button-container { 
+            grid-column: span 2; 
+            display: flex; 
+            justify-content: center; 
+        } 
+
+        .button-container input[type="submit"] { 
+            background-color: #9fd6fc; 
+            color: #fff; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.2s ease; 
+        } 
+
+        .button-container input[type="submit"]:hover { 
+            background-color: #6facd8; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <form action=""> 
+        <h1>Registration Form</h1> 
+
+        <label for="n">Name:</label> 
+        <input type="text" id="n" required> 
+
+        <label for="s">Surname:</label> 
+        <input type="text" id="s" required> 
+
+        <label for="a">Age:</label> 
+        <input type="number" id="a" min="18" max="100" required> 
+
+        <label for="e">Email:</label> 
+        <input type="email" id="e" required> 
+
+        <label for="p">Password:</label> 
+        <input type="password" id="p" required> 
+
+        <div class="button-container"> 
+            <input type="submit" value="Sign In"> 
+        </div> 
+    </form> 
+</body> 
+</html>
